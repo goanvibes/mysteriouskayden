@@ -484,3 +484,28 @@ footer {
     .api-btn { justify-content: center; width: 100%; }
                   }
   
+/* =========================================
+   SCROLL ANIMATION UTILITIES (JS Triggered)
+========================================= */
+.scroll-anim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.scroll-anim.fade-in-delay {
+    transition-delay: 0.2s;
+}
+
+.mystic-card.scroll-anim {
+    transform: translateY(60px) scale(0.95);
+}
+
+.mystic-card.scroll-anim:nth-child(2) { transition-delay: 0.2s; }
+.mystic-card.scroll-anim:nth-child(3) { transition-delay: 0.4s; }
+
+/* The class JS adds when element is in view */
+.scroll-anim.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
