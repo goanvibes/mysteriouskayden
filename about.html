@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Enigma | Mysterious Kayden</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 150px 5% 50px;
+            text-align: center;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 5%;
+        }
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        /* Simulating the image container */
+        .img-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--void-black), var(--arcane-purple));
+            border-radius: 20px;
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 0 40px rgba(138,43,226,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .img-placeholder::after {
+            content: '\f21b'; /* FontAwesome user-secret icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 8rem;
+            color: rgba(255,255,255,0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .stat-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--smooth);
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--emerald-fire);
+            box-shadow: 0 10px 20px rgba(0,250,154,0.1);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-family: 'Cinzel', serif;
+            color: var(--emerald-fire);
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 900px) {
+            .about-content { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="mystic-overlay"></div>
+    <div id="particles-js"></div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo-text">KAYDEN</h2>
+            <button class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html"><i class="fas fa-magic"></i> The Illusion</a>
+            <a href="shows.html"><i class="fas fa-fire"></i> Spectacles</a>
+            <a href="about.html" class="active"><i class="fas fa-user-secret"></i> The Enigma</a>
+            <a href="booking.html"><i class="fas fa-ticket-alt"></i> Summon Him</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <header class="top-nav">
+            <button class="menu-toggle" id="openSidebar"><i class="fas fa-bars"></i></button>
+            <h1 class="logo-text">KAYDEN</h1>
+            <a href="booking.html" class="btn btn-glow">Book Now</a>
+        </header>
+
+        <section class="about-hero">
+            <h1 class="section-title">The <span class="highlight-violet">Enigma</span></h1>
+        </section>
+
+        <section class="about-content">
+            <div class="about-image scroll-anim">
+                <div class="img-placeholder"></div>
+            </div>
+            <div class="about-text scroll-anim fade-in-delay">
+                <h2>Forged in Fire. Shrouded in Mystery.</h2>
+                <br>
+                <p>Kayden didn't just learn magic; he surrendered to it. From the underground street circuits to the grandest stages across the globe, his journey has been one of relentless perfectionism and dangerous experimentation.</p>
+                <p>He is one of the rare few who seamlessly blends grand stage illusions with the visceral, chaotic art of fire manipulation. For Kayden, a performance isn't a trick—it is a momentary tear in the fabric of reality.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Active</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">5K+</div>
+                        <div class="stat-label">Torches Lit</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Minds Blown</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h2 class="logo-text">KAYDEN</h2>
+                <p>&copy; 2026 Mysterious Kayden. The Magic is Real.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
+</body>
+                                          </html>
+                                          
