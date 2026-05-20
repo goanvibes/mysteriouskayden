@@ -8,10 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Overriding the base body to inject the Parallax Background Image */
+        body {
+            /* Using a high-res placeholder image of fire/sparks. Replace this URL with Kayden's actual stage photo */
+            background-image: url('https://images.unsplash.com/photo-1542261777448-23d2a287091c?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Creates the premium parallax scroll effect */
+            background-repeat: no-repeat;
+            background-color: #050508; /* Fallback */
+        }
+
+        /* Upgrading the mystic-overlay to act as a cinematic vignette */
+        .mystic-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            /* This gradient keeps the center slightly visible but heavily darkens the edges for text readability */
+            background: radial-gradient(circle at 50% 50%, rgba(5, 5, 8, 0.4) 0%, #050508 90%);
+            z-index: -1;
+            pointer-events: none;
+            mix-blend-mode: multiply; /* Blends the shadows dynamically with the image behind it */
+        }
+    </style>
 </head>
 <body>
     <div class="mystic-overlay"></div>
-    <div id="particles-js"></div> <div class="orb orb-1"></div>
+    <div id="particles-js"></div> 
+    <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
 
