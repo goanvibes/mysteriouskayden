@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectacles | Mysterious Kayden</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific styling for the gallery */
+        .page-header {
+            padding: 150px 5% 50px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(5,5,8,0.9) 0%, transparent 100%);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 5% 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            background: var(--deep-blue);
+            border: 1px solid var(--glass-border);
+            transition: var(--smooth);
+        }
+
+        /* Simulating images with CSS gradients for the baseline code, 
+           you will replace these backgrounds with actual performance photos */
+        .img-fire { background: linear-gradient(45deg, #000, #4a1000); }
+        .img-illusion { background: linear-gradient(45deg, #000, #1a0033); }
+        .img-escape { background: linear-gradient(45deg, #001a1a, #000); }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, var(--void-black) 0%, rgba(138,43,226,0.6) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            transition: var(--smooth);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(138,43,226,0.3);
+            border-color: var(--mystic-violet);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            bottom: 0;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--starlight);
+            text-shadow: 0 2px 5px #000;
+        }
+
+        .gallery-overlay p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mystic-overlay"></div>
+    <div id="particles-js"></div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo-text">KAYDEN</h2>
+            <button class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html"><i class="fas fa-magic"></i> The Illusion</a>
+            <a href="shows.html" class="active"><i class="fas fa-fire"></i> Spectacles</a>
+            <a href="about.html"><i class="fas fa-user-secret"></i> The Enigma</a>
+            <a href="booking.html"><i class="fas fa-ticket-alt"></i> Summon Him</a>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <header class="top-nav">
+            <button class="menu-toggle" id="openSidebar"><i class="fas fa-bars"></i></button>
+            <h1 class="logo-text">KAYDEN</h1>
+            <a href="index.html#booking" class="btn btn-glow">Book Now</a>
+        </header>
+
+        <div class="page-header">
+            <h1 class="section-title">The <span class="highlight-violet">Spectacles</span></h1>
+            <p class="description fade-in">A curated collection of Kayden's most dangerous and mind-bending routines.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item img-fire scroll-anim">
+                <div class="gallery-overlay">
+                    <h3>The Dragon's Kiss</h3>
+                    <p>A mesmerizing 10-minute fire breathing and eating routine that commands the primal element.</p>
+                    <a href="index.html#booking" class="btn btn-solid btn-small"><i class="fas fa-fire"></i> Request Act</a>
+                </div>
+            </div>
+            
+            <div class="gallery-item img-illusion scroll-anim">
+                <div class="gallery-overlay">
+                    <h3>The Void Box</h3>
+                    <p>A grand stage illusion where logic ceases to exist. Watch an assistant vanish into thin air.</p>
+                    <a href="index.html#booking" class="btn btn-glow btn-small"><i class="fas fa-eye"></i> Request Act</a>
+                </div>
+            </div>
+
+            <div class="gallery-item img-escape scroll-anim">
+                <div class="gallery-overlay">
+                    <h3>Submerged Enigma</h3>
+                    <p>A death-defying underwater escape act chained entirely in heavy steel.</p>
+                    <a href="index.html#booking" class="btn btn-outline btn-small"><i class="fas fa-lock"></i> Request Act</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <h2 class="logo-text">KAYDEN</h2>
+                <p>&copy; 2026 Mysterious Kayden. The Magic is Real.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
